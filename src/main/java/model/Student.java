@@ -7,9 +7,9 @@ public class Student {
     private final int currentCourseNumber;
     private final float avgExamScore;
 
-    public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
-        this.fullName = fullName;
+    public Student( String universityId, String fullName, int currentCourseNumber, float avgExamScore) {
         this.universityId = universityId;
+        this.fullName = fullName;
         this.currentCourseNumber = currentCourseNumber;
         this.avgExamScore = avgExamScore;
     }
@@ -32,10 +32,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student:\n" +
-                "fullName: " + fullName + "\n" +
-                "universityId: " + universityId + "\n" +
-                "currentCourseNumber: " + currentCourseNumber + "\n" +
+        return "Student: " +
+                "fullName: " + fullName + "; " +
+                "universityId: " + universityId + "; " +
+                "currentCourseNumber: " + currentCourseNumber + "; " +
                 "avgExamScore: " + avgExamScore;
     }
 }

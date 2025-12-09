@@ -1,10 +1,15 @@
 package model;
 
+
 public enum StudyProfile {
     MEDICINE("Медицина"),
-    ENGINEERING("Инженерные специальности");
+    ENGINEERING("Инженерные специальности"),
+    PHYSICS("Физика"),
+    LINGUISTICS("Лингвистика"),
+    MATHEMATICS("Математика");
 
     private final String profileName;
+
 
     StudyProfile(String profileName) {
         this.profileName = profileName;
