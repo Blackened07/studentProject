@@ -16,6 +16,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Function;
 
@@ -59,27 +60,22 @@ public class ExcelDataLoader {
 
     private static List<University> parseUniversities(Sheet sheet) {
         List<University> universities = new ArrayList<>();
-        for (int i = 1; i < sheet.getLastRowNum(); i++) {
-            try {
-                Row row = sheet.getRow(i);
-                if (row == null) {
-                    throw new NullPointerException("Row " + i + " not found");
-                }
-                universities.add(new University(
-                        row.getCell(CELL_1).getStringCellValue(),
-                        row.getCell(CELL_2).getStringCellValue(),
-                        row.getCell(CELL_3).getStringCellValue(),
-                        (int) row.getCell(CELL_4).getNumericCellValue(),
-                        StudyProfile.valueOf(row.getCell(CELL_5).getStringCellValue())
-                ));
-            } catch (NullPointerException e) {
-                System.out.println(e.getMessage());
-            }
+        Iterator<Row> rowIterator = sheet.rowIterator();
+        rowIterator.next();
+        while (rowIterator.hasNext()) {
+            Row row = sheet.rowIterator().next();
+            universities.add(new University(
+                    row.getCell(CELL_1).getStringCellValue(),
+                    row.getCell(CELL_2).getStringCellValue(),
+                    row.getCell(CELL_3).getStringCellValue(),
+                    (int) row.getCell(CELL_4).getNumericCellValue(),
+                    StudyProfile.valueOf(row.getCell(CELL_5).getStringCellValue())
+            ));
         }
         return universities;
     }
 
-
+    //Оставлю и такую реализацию
     private static List<Student> parseStudents(Sheet sheet) {
         List<Student> students = new ArrayList<>();
         for (int i = 1; i < sheet.getLastRowNum(); i++) {
