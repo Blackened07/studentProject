@@ -72,7 +72,7 @@ public class ExcelDataLoader {
         return universities;
     }
 
-    //Оставлю и такую реализацию, тк сделал до того как посмотрел в мануал к заданию
+    //Оставлю и такую реализацию
     private static List<Student> parseStudents(Sheet sheet) throws NullPointerException {
         return StreamSupport.stream(sheet.spliterator(), false)
                 .skip(1)
