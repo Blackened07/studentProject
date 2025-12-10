@@ -1,13 +1,13 @@
 package service;
 
 import model.University;
-import util.ExcelDataLoader;
-import util.PropertiesUtil;
+import util.downloadUtil.ExcelDataLoader;
+import util.downloadUtil.PropertiesUtil;
 
 import java.util.List;
 
 import static model.Entities.SHEET_NAME_UNIVERSITY;
-import static util.PropertiesUtil.EXCEL_PATH;
+import static util.downloadUtil.PropertiesUtil.EXCEL_PATH;
 
 public class UniversityService {
     private final List<University> universities;

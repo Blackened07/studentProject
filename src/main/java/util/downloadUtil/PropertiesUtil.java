@@ -1,4 +1,4 @@
-package util;
+package util.downloadUtil;
 
 import java.io.IOException;
 import java.io.InputStream;
