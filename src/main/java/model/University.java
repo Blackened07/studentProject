@@ -31,8 +31,8 @@ public class University {
         return yearOfFoundation;
     }
 
-    public StudyProfile getMainProfile() {
-        return mainProfile;
+    public String getMainProfile() {
+        return mainProfile.getProfileName();
     }
 
     @Override

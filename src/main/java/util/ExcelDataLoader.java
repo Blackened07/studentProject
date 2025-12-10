@@ -14,11 +14,10 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class ExcelDataLoader {
     private static final int CELL_1 = 0;
@@ -38,9 +37,8 @@ public class ExcelDataLoader {
         return readData(filePath, sheetName, ExcelDataLoader::parseUniversities);
     }
 
-    private static <T> List<T> readData(String filePath, String sheetName, Function<Sheet, List<T>> parser) {
+    private static <T> List<T> readData(String filePath, String sheetName, SheetParser<T> parser) {
         Path path = Paths.get(filePath);
-
         try (
                 InputStream inputStream = Files.newInputStream(path);
                 Workbook workbook = new XSSFWorkbook(inputStream);
@@ -49,21 +47,23 @@ public class ExcelDataLoader {
             if (sheet == null) {
                 throw new NullPointerException("Sheet " + sheetName + " not found");
             }
-            return parser.apply(sheet);
-
-        } catch (IOException e) {
+            return parser.parse(sheet);
+        } catch (Exception e) {
             System.out.println("Error reading excel file: " + e.getMessage());
             return Collections.emptyList();
         }
-
     }
 
-    private static List<University> parseUniversities(Sheet sheet) {
+    //метод по заданию
+    private static List<University> parseUniversities(Sheet sheet) throws NullPointerException {
         List<University> universities = new ArrayList<>();
         Iterator<Row> rowIterator = sheet.rowIterator();
         rowIterator.next();
         while (rowIterator.hasNext()) {
-            Row row = sheet.rowIterator().next();
+            Row row = rowIterator.next();
+            if (row == null) {
+                throw new NullPointerException("Row not found");
+            }
             universities.add(new University(
                     row.getCell(CELL_1).getStringCellValue(),
                     row.getCell(CELL_2).getStringCellValue(),
@@ -75,26 +75,21 @@ public class ExcelDataLoader {
         return universities;
     }
 
-    //Оставлю и такую реализацию
-    private static List<Student> parseStudents(Sheet sheet) {
-        List<Student> students = new ArrayList<>();
-        for (int i = 1; i < sheet.getLastRowNum(); i++) {
-            try {
-                Row row = sheet.getRow(i);
-                if (row == null) {
-                    throw new NullPointerException("Row " + i + " not found");
-                }
-                students.add(new Student(
-                        row.getCell(CELL_1).getStringCellValue(),
-                        row.getCell(CELL_2).getStringCellValue(),
-                        (int) row.getCell(CELL_3).getNumericCellValue(),
-                        (int) row.getCell(CELL_4).getNumericCellValue()
-                ));
-            } catch (NullPointerException e) {
-                System.out.println(e.getMessage());
-            }
-        }
-        return students;
+    //Оставлю и такую реализацию, тк сделал до того как посмотрел в мануал к заданию
+    private static List<Student> parseStudents(Sheet sheet) throws NullPointerException {
+        return StreamSupport.stream(sheet.spliterator(), false)
+                .skip(1)
+                .map(row -> {
+                    if (row == null) {
+                        throw new NullPointerException("Row not found");
+                    }
+                    return new Student(
+                            row.getCell(CELL_1).getStringCellValue(),
+                            row.getCell(CELL_2).getStringCellValue(),
+                            (int) row.getCell(CELL_3).getNumericCellValue(),
+                            (int) row.getCell(CELL_4).getNumericCellValue()
+                    );
+                })
+                .collect(Collectors.toList());
     }
-
 }
