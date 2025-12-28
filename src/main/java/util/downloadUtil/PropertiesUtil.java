@@ -7,6 +7,10 @@ import java.util.Properties;
 public class PropertiesUtil {
     private static final Properties PROPERTIES = new Properties();
     public static final String EXCEL_PATH = "excel.path";
+    public static final String STUDENTS_JSON_PATH = "studentsJson.path";
+    public static final String UNIVERSITIES_JSON_PATH = "universityJson.path";
+    public static final String RANDOM_STUDENTS_JSON_PATH = "randomStudents.path";
+
     static {
         loadProperties();
     }

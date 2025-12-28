@@ -1,4 +1,4 @@
-package util;
+package util.comparatorUtil;
 
 import model.Student;
 import model.University;

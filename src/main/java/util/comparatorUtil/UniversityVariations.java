@@ -1,4 +1,4 @@
-package util;
+package util.comparatorUtil;
 
 public enum UniversityVariations {
     ID,

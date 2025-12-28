@@ -2,10 +2,12 @@ package view;
 
 import service.StudentService;
 import service.UniversityService;
-import util.ComparatorUtil;
-import util.StudentVariations;
-import util.UniversityVariations;
+import util.SizeComparatorUtil;
+import util.comparatorUtil.ComparatorUtil;
+import util.comparatorUtil.StudentVariations;
+import util.comparatorUtil.UniversityVariations;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Printer {
@@ -36,4 +38,10 @@ public class Printer {
         universityService.getUniversities().forEach(System.out::println);
         System.out.println();
     }
+
+    public void printCompareResult(List<?> original, List<?> fromJson) {
+        System.out.println(SizeComparatorUtil.compare(original, fromJson));
+    }
+
+
 }

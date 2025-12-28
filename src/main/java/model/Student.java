@@ -1,13 +1,18 @@
 package model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Objects;
 
 public class Student {
-
+    @SerializedName(value = "full_name", alternate = "student_name")
     private final String fullName;
+    @SerializedName(value = "university_number")
     private final String universityId;
-    private final int currentCourseNumber;
-    private final float avgExamScore;
+    @SerializedName(value = "course", alternate = {"current_course", "course_number"})
+    private int currentCourseNumber;
+    @SerializedName(value = "avg", alternate = {"average_score"})
+    private float avgExamScore;
 
     public Student( String universityId, String fullName, int currentCourseNumber, float avgExamScore) {
         this.universityId = universityId;
@@ -30,6 +35,26 @@ public class Student {
 
     public float getAvgExamScore() {
         return avgExamScore;
+    }
+
+    public void setCurrentCourseNumber(int currentCourseNumber) {
+        this.currentCourseNumber = currentCourseNumber;
+    }
+
+    public void setAvgExamScore(float avgExamScore) {
+        this.avgExamScore = avgExamScore;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null || getClass() != object.getClass()) return false;
+        Student student = (Student) object;
+        return currentCourseNumber == student.currentCourseNumber && Float.compare(avgExamScore, student.avgExamScore) == 0 && Objects.equals(fullName, student.fullName) && Objects.equals(universityId, student.universityId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName, universityId, currentCourseNumber, avgExamScore);
     }
 
     @Override
