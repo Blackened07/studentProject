@@ -7,6 +7,8 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -23,6 +25,8 @@ public class ExcelDataLoader {
     private static final int CELL_4 = 3;
     private static final int CELL_5 = 4;
 
+    private static final Logger logger = LoggerFactory.getLogger(ExcelDataLoader.class);
+
     private ExcelDataLoader() {
     }
 
@@ -31,10 +35,16 @@ public class ExcelDataLoader {
     }
 
     public static List<University> readUniversities(String filePath, String sheetName) {
-        return readData(filePath, sheetName, ExcelDataLoader::parseUniversities);
+        return readData(filePath, sheetName, (ExcelDataLoader::parseUniversities));
     }
 
+    //ExcelDataLoader::parseU/S
+    //* Передача ссылки: Когда вы вызываете
+    // readData(path, name, ExcelDataLoader::parseUniversities),
+    // вы не запускаете парсинг. Вы просто передаете «инструкцию» (адрес метода) внутрь readData.
+
     private static <T> List<T> readData(String filePath, String sheetName, SheetParser<T> parser) {
+        logger.info("Начало чтения файла; Путь: {}", filePath);
         Path path = Paths.get(filePath);
         try (
                 InputStream inputStream = Files.newInputStream(path);
@@ -42,11 +52,12 @@ public class ExcelDataLoader {
         ) {
             Sheet sheet = workbook.getSheet(sheetName);
             if (sheet == null) {
+                logger.warn("Страница не обнаружена");
                 throw new NullPointerException("Sheet " + sheetName + " not found");
             }
             return parser.parse(sheet);
         } catch (Exception e) {
-            System.out.println("Error reading excel file: " + e.getMessage());
+            logger.error("Файл не найден: {}", e.getMessage());
             return Collections.emptyList();
         }
     }
@@ -59,6 +70,7 @@ public class ExcelDataLoader {
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
             if (row == null) {
+                logger.warn("Строка не обнаружена");
                 throw new NullPointerException("Row not found");
             }
             universities.add(new University(
@@ -78,6 +90,7 @@ public class ExcelDataLoader {
                 .skip(1)
                 .map(row -> {
                     if (row == null) {
+                        logger.warn("Строка не обнаружена");
                         throw new NullPointerException("Row not found");
                     }
                     return new Student(

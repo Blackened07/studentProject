@@ -2,7 +2,8 @@ package util.downloadUtil;
 
 import model.Statistic;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -31,10 +32,13 @@ public class XlsWriter {
             "Университет"
     };
 
+    private static final Logger logger = LoggerFactory.getLogger(XlsWriter.class);
+
     private XlsWriter() {
     }
 
     public static void write(List<Statistic> stats, String path) {
+        logger.info("Старт сбора статистики в файл: {}, размер {}", path, stats.size());
         try (FileInputStream inputStream = new FileInputStream(path);
                 Workbook workbook = WorkbookFactory.create(inputStream)) {
 
@@ -51,8 +55,10 @@ public class XlsWriter {
 
             setData(stats, sheet);
 
-            writeFile(workbook, path);
+            writeFile(workbook, path, stats);
+
         } catch (IOException e) {
+            logger.warn("Элемент не найден");
             throw new RuntimeException(e);
         }
     }
@@ -64,7 +70,7 @@ public class XlsWriter {
         cellStyle.setFont(font);
     }
 
-    private static void setWorkBookHeader(CellStyle cellStyle, Sheet sheet) {
+    private static void setWorkBookHeader(CellStyle cellStyle, Sheet sheet) throws IOException {
         Row row = sheet.createRow(HEADER_ROW);
 
         for (int i = 0; i < COLUMNS.length; i++) {
@@ -74,7 +80,7 @@ public class XlsWriter {
         }
     }
 
-    private static void setData(List<Statistic> stats, Sheet sheet) {
+    private static void setData(List<Statistic> stats, Sheet sheet) throws IOException {
         int count = START_ROW;
         for (Statistic stat : stats) {
             Row row = sheet.createRow(count++);
@@ -87,11 +93,12 @@ public class XlsWriter {
         }
     }
 
-    private static void writeFile(Workbook workbook, String path) {
+    private static void writeFile(Workbook workbook, String path, List<Statistic> stats) {
         try (FileOutputStream out = new FileOutputStream(path)) {
             workbook.write(out);
+            logger.info("Запись в файл {} прошла успешно. Записей: {}", path, stats.size());
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            logger.error("Файл не найден {}", e.getMessage());
         }
     }
 }

@@ -1,51 +1,51 @@
 [
   {
-    "id": "0001-high",
-    "fullName": "Московский Выдуманный Университет",
-    "shortName": "МВУ",
-    "yearOfFoundation": 1990,
-    "mainProfile": "PHYSICS"
+    "university_id": "0001-high",
+    "full_university_name": "Московский Выдуманный Университет",
+    "short_name": "МВУ",
+    "foundation_year": 1990,
+    "study_profile": "PHYSICS"
   },
   {
-    "id": "0002-high",
-    "fullName": "Московский Придуманный Институт",
-    "shortName": "МПИ",
-    "yearOfFoundation": 1987,
-    "mainProfile": "PHYSICS"
+    "university_id": "0002-high",
+    "full_university_name": "Московский Придуманный Институт",
+    "short_name": "МПИ",
+    "foundation_year": 1987,
+    "study_profile": "PHYSICS"
   },
   {
-    "id": "0003-high",
-    "fullName": "Московский Государственный Медицинский Университет",
-    "shortName": "МГМУ",
-    "yearOfFoundation": 1960,
-    "mainProfile": "MEDICINE"
+    "university_id": "0003-high",
+    "full_university_name": "Московский Государственный Медицинский Университет",
+    "short_name": "МГМУ",
+    "foundation_year": 1960,
+    "study_profile": "MEDICINE"
   },
   {
-    "id": "0004-high",
-    "fullName": "Тамбовский Университет Медицины",
-    "shortName": "ТУМ",
-    "yearOfFoundation": 1995,
-    "mainProfile": "MEDICINE"
+    "university_id": "0004-high",
+    "full_university_name": "Тамбовский Университет Медицины",
+    "short_name": "ТУМ",
+    "foundation_year": 1995,
+    "study_profile": "MEDICINE"
   },
   {
-    "id": "0005-high",
-    "fullName": "Самарский Медицинский Институт",
-    "shortName": "СМИ",
-    "yearOfFoundation": 1936,
-    "mainProfile": "MEDICINE"
+    "university_id": "0005-high",
+    "full_university_name": "Самарский Медицинский Институт",
+    "short_name": "СМИ",
+    "foundation_year": 1936,
+    "study_profile": "MEDICINE"
   },
   {
-    "id": "0006-high",
-    "fullName": "Воронежский Литературно-Переводческий Университет",
-    "shortName": "ВЛПУ",
-    "yearOfFoundation": 2003,
-    "mainProfile": "LINGUISTICS"
+    "university_id": "0006-high",
+    "full_university_name": "Воронежский Литературно-Переводческий Университет",
+    "short_name": "ВЛПУ",
+    "foundation_year": 2003,
+    "study_profile": "LINGUISTICS"
   },
   {
-    "id": "0007-high",
-    "fullName": "Казанский Университет Вычислений",
-    "shortName": "КУВ",
-    "yearOfFoundation": 1989,
-    "mainProfile": "MATHEMATICS"
+    "university_id": "0007-high",
+    "full_university_name": "Казанский Университет Вычислений",
+    "short_name": "КУВ",
+    "foundation_year": 1989,
+    "study_profile": "MATHEMATICS"
   }
 ]

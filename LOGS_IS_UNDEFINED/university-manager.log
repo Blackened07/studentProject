@@ -1,0 +1,155 @@
+2026-01-03 17:46:20.897 [main] INFO  App - Приложение запущено!
+2026-01-03 17:46:20.905 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
+2026-01-03 17:46:24.268 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
+2026-01-03 17:46:24.402 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Students.json
+2026-01-03 17:46:24.430 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:46:24.431 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Universities.json
+2026-01-03 17:46:24.435 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:46:24.435 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Students.json
+2026-01-03 17:46:24.436 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:46:24.451 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Universities.json
+2026-01-03 17:46:24.452 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:46:24.532 [main] INFO  util.downloadUtil.XlsWriter - Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4
+2026-01-03 17:46:24.714 [main] ERROR util.downloadUtil.XlsWriter - Файл не найден src\main\resources\universityInfo.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2026-01-03 17:46:24.715 [main] INFO  util.downloadUtil.XlsWriter - Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4
+2026-01-03 17:46:24.715 [main] INFO  App - Работа приложения завершена!
+2026-01-03 17:51:37.625 [main] INFO  App - Приложение запущено!
+2026-01-03 17:51:37.633 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
+2026-01-03 17:51:38.737 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
+2026-01-03 17:51:38.836 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Students.json
+2026-01-03 17:51:38.869 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:51:38.870 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Universities.json
+2026-01-03 17:51:38.873 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:51:38.874 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Students.json
+2026-01-03 17:51:38.875 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:51:38.895 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Universities.json
+2026-01-03 17:51:38.896 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:51:38.909 [main] INFO  util.downloadUtil.XlsWriter - Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4
+2026-01-03 17:51:39.042 [main] ERROR util.downloadUtil.XlsWriter - Файл не найден src\main\resources\universityInfo.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
+2026-01-03 17:51:39.042 [main] INFO  App - Работа приложения завершена!
+2026-01-03 17:52:04.417 [main] INFO  App - Приложение запущено!
+2026-01-03 17:52:04.428 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
+2026-01-03 17:52:05.347 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
+2026-01-03 17:52:05.431 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Students.json
+2026-01-03 17:52:05.455 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:52:05.455 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Universities.json
+2026-01-03 17:52:05.458 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:52:05.459 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Students.json
+2026-01-03 17:52:05.460 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:52:05.475 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Universities.json
+2026-01-03 17:52:05.477 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
+2026-01-03 17:52:05.489 [main] INFO  util.downloadUtil.XlsWriter - Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4
+2026-01-03 17:52:07.188 [main] INFO  util.downloadUtil.XlsWriter - Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4
+2026-01-03 17:52:07.189 [main] INFO  App - Работа приложения завершена!
+<log4j:event logger="App"
+             timestamp="1767427517545" level="INFO" thread="main">
+  <log4j:message>Приложение запущено!</log4j:message>
+  <log4j:locationInfo class="App"
+                      method="main" file="App.java" line="25"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.ExcelDataLoader"
+             timestamp="1767427517559" level="INFO" thread="main">
+  <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
+                      method="readData" file="ExcelDataLoader.java" line="47"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.ExcelDataLoader"
+             timestamp="1767427518592" level="INFO" thread="main">
+  <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
+                      method="readData" file="ExcelDataLoader.java" line="47"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518668" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src/main/resources/Students.json</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518687" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518687" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src/main/resources/Universities.json</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518690" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518691" level="INFO" thread="main">
+  <log4j:message>Начало парсинга из: src/main/resources/Students.json</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseFromJson" file="JsonUtil.java" line="25"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518692" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseFromJson" file="JsonUtil.java" line="30"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518705" level="INFO" thread="main">
+  <log4j:message>Начало парсинга из: src/main/resources/Universities.json</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseFromJson" file="JsonUtil.java" line="25"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1767427518705" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseFromJson" file="JsonUtil.java" line="30"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XlsWriter"
+             timestamp="1767427518716" level="INFO" thread="main">
+  <log4j:message>Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XlsWriter"
+                      method="write" file="XlsWriter.java" line="41"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XlsWriter"
+             timestamp="1767427518997" level="INFO" thread="main">
+  <log4j:message>Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XlsWriter"
+                      method="writeFile" file="XlsWriter.java" line="99"/>
+
+</log4j:event>
+
+<log4j:event logger="App"
+             timestamp="1767427518998" level="INFO" thread="main">
+  <log4j:message>Работа приложения завершена!</log4j:message>
+  <log4j:locationInfo class="App"
+                      method="main" file="App.java" line="52"/>
+
+</log4j:event>
+
