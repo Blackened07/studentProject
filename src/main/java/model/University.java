@@ -1,18 +1,32 @@
 package model;
 
 import com.google.gson.annotations.SerializedName;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlTransient;
 
 import java.util.Objects;
-
+@XmlAccessorType(XmlAccessType.FIELD)
 public class University {
+
+    @XmlElement(name = "UniversityID")
     @SerializedName(value = "university_id", alternate = "university_number")
     private final String id;
+
+    @XmlElement(name = "UniversityName")
     @SerializedName(value = "full_university_name", alternate = "university_name")
     private final String fullName;
+
+    @XmlTransient
     @SerializedName(value = "short_name", alternate = {"abbreviation", "short_university_name"})
     private final String shortName;
+
+    @XmlTransient
     @SerializedName("foundation_year")
     private final int yearOfFoundation;
+
+    @XmlElement(name = "UniversityProfile")
     @SerializedName(value = "study_profile", alternate = {"main_study_profile", "profile"})
     private final StudyProfile mainProfile;
 

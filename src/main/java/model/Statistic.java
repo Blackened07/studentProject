@@ -1,6 +1,11 @@
 package model;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Statistic {
+
     private final StudyProfile studyProfile;
     private float avgExamScore;
     private int studentsNumber;

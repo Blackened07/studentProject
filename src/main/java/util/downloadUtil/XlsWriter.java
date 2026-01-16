@@ -6,11 +6,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
-public class XlsWriter {
+public final class XlsWriter {
 
     private static final String STATISTIC_SHEET_NAME = "Статистика";
     private static final short FONT_SIZE = 12;
@@ -63,14 +65,14 @@ public class XlsWriter {
         }
     }
 
-    private static void setWorkBookFont(CellStyle cellStyle, Font font) throws IOException {
+    private static void setWorkBookFont(CellStyle cellStyle, Font font) {
         font.setBold(true);
         font.setFontHeightInPoints(FONT_SIZE);
         font.setUnderline(UNDER_LINE);
         cellStyle.setFont(font);
     }
 
-    private static void setWorkBookHeader(CellStyle cellStyle, Sheet sheet) throws IOException {
+    private static void setWorkBookHeader(CellStyle cellStyle, Sheet sheet) {
         Row row = sheet.createRow(HEADER_ROW);
 
         for (int i = 0; i < COLUMNS.length; i++) {
@@ -80,12 +82,12 @@ public class XlsWriter {
         }
     }
 
-    private static void setData(List<Statistic> stats, Sheet sheet) throws IOException {
+    private static void setData(List<Statistic> stats, Sheet sheet) {
         int count = START_ROW;
         for (Statistic stat : stats) {
             Row row = sheet.createRow(count++);
 
-            row.createCell(PROFILE_INDEX).setCellValue(stat.getStudyProfile().getProfileName());
+            row.createCell(PROFILE_INDEX).setCellValue(Optional.ofNullable(stat.getStudyProfile().getProfileName()).isPresent());
             row.createCell(AVG_INDEX).setCellValue(stat.getAvgExamScore());
             row.createCell(STUDENTS_NUMBER_INDEX).setCellValue(stat.getStudentsNumber());
             row.createCell(UNIVERSITIES_NUMBER_INDEX).setCellValue(stat.getUniversitiesNumber());
@@ -97,8 +99,11 @@ public class XlsWriter {
         try (FileOutputStream out = new FileOutputStream(path)) {
             workbook.write(out);
             logger.info("Запись в файл {} прошла успешно. Записей: {}", path, stats.size());
-        } catch (IOException e) {
-            logger.error("Файл не найден {}", e.getMessage());
+        } catch (FileNotFoundException e) {
+            logger.error("Файл {} не найден {}", path, e.getMessage());
+        }
+        catch (IOException e) {
+            logger.error("Ошибка записи в файл: {}; {}", path, e.getMessage());
         }
     }
 }

@@ -1,15 +1,19 @@
+import model.FullData;
 import model.Statistic;
 import model.Student;
 import model.University;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import service.StatisticService;
 import service.StudentService;
 import service.UniversityService;
 import util.JSONutil.JsonUtil;
 import util.SizeComparatorUtil;
 import util.StatisticUtil;
+import util.downloadUtil.JsonWriter;
 import util.downloadUtil.PropertiesUtil;
 import util.downloadUtil.XlsWriter;
+import util.downloadUtil.XmlWriter;
 import view.Printer;
 
 import java.util.List;
@@ -25,29 +29,18 @@ public class App {
         logger.info("Приложение запущено!");
         StudentService studentService = new StudentService();
         UniversityService universityService = new UniversityService();
+        StatisticService statisticService = new StatisticService(studentService.getStudents(), universityService.getUniversities());
 
-        Printer printer = new Printer(studentService, universityService);
+        FullData fullData = new FullData();
 
-       /* printer.printStudentsSortedByAvgDesc();
-        printer.printStudentsSortedByName();
-        printer.printUniversitySortedByProfile();*/
+        fullData.setStudentList(studentService.getStudents());
+        fullData.setUniversityList(universityService.getUniversities());
+        fullData.setStatisticList(statisticService.getStatistics());
 
-        studentService.parseStudentsToJson();
-        universityService.parseUniversitiesToJson();
+        statisticService.writeToXLS(statisticService.getStatistics());
 
-        List<Student> studentsFronJson = studentService.parseStudentsFromJson();
-        List<University> universitiesFromJson = universityService.parseUniversityFromJson();
-
-        /*studentsFronJson.forEach(System.out::println);
-        universitiesFromJson.forEach(System.out::println);*/
-
-        //can void
-/*        List<Student> list = JsonUtil.showProcess(studentService.getRandomStudents(), Student.class);
-        List<University> list1 = JsonUtil.showProcess(universityService.getRandomUniversities(), University.class);*/
-
-        List<Statistic> statistics = StatisticUtil.getStatistics(studentService.getStudents(), universityService.getUniversities());
-
-        XlsWriter.write(statistics, PropertiesUtil.getProperty(EXCEL_PATH));
+        XmlWriter.writeToXml(fullData);
+        JsonWriter.write(fullData);
 
         logger.info("Работа приложения завершена!");
     }

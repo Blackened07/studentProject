@@ -1,25 +1,38 @@
 package model;
 
 import com.google.gson.annotations.SerializedName;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlTransient;
 
 import java.util.Objects;
-
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Student {
+
+    @XmlElement(name = "StudentName")
     @SerializedName(value = "full_name", alternate = "student_name")
     private final String fullName;
+
+    @XmlElement(name = "UniversityID")
     @SerializedName(value = "university_number")
     private final String universityId;
+
+    @XmlTransient
     @SerializedName(value = "course", alternate = {"current_course", "course_number"})
     private int currentCourseNumber;
+
+    @XmlElement(name = "AverageScore")
     @SerializedName(value = "avg", alternate = {"average_score"})
     private float avgExamScore;
 
-    public Student( String universityId, String fullName, int currentCourseNumber, float avgExamScore) {
+    public Student(String universityId, String fullName, int currentCourseNumber, float avgExamScore) {
         this.universityId = universityId;
         this.fullName = fullName;
         this.currentCourseNumber = currentCourseNumber;
         this.avgExamScore = avgExamScore;
     }
+
 
     public String getFullName() {
         return fullName;

@@ -10,6 +10,8 @@ public class PropertiesUtil {
     public static final String STUDENTS_JSON_PATH = "studentsJson.path";
     public static final String UNIVERSITIES_JSON_PATH = "universityJson.path";
     public static final String RANDOM_STUDENTS_JSON_PATH = "randomStudents.path";
+    public static final String XML_PATH = "xml.path";
+    public static final String JSON_PATH = "json.path";
 
     static {
         loadProperties();

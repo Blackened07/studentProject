@@ -1,155 +1,336 @@
-2026-01-03 17:46:20.897 [main] INFO  App - Приложение запущено!
-2026-01-03 17:46:20.905 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
-2026-01-03 17:46:24.268 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
-2026-01-03 17:46:24.402 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Students.json
-2026-01-03 17:46:24.430 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:46:24.431 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Universities.json
-2026-01-03 17:46:24.435 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:46:24.435 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Students.json
-2026-01-03 17:46:24.436 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:46:24.451 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Universities.json
-2026-01-03 17:46:24.452 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:46:24.532 [main] INFO  util.downloadUtil.XlsWriter - Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4
-2026-01-03 17:46:24.714 [main] ERROR util.downloadUtil.XlsWriter - Файл не найден src\main\resources\universityInfo.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2026-01-03 17:46:24.715 [main] INFO  util.downloadUtil.XlsWriter - Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4
-2026-01-03 17:46:24.715 [main] INFO  App - Работа приложения завершена!
-2026-01-03 17:51:37.625 [main] INFO  App - Приложение запущено!
-2026-01-03 17:51:37.633 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
-2026-01-03 17:51:38.737 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
-2026-01-03 17:51:38.836 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Students.json
-2026-01-03 17:51:38.869 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:51:38.870 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Universities.json
-2026-01-03 17:51:38.873 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:51:38.874 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Students.json
-2026-01-03 17:51:38.875 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:51:38.895 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Universities.json
-2026-01-03 17:51:38.896 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:51:38.909 [main] INFO  util.downloadUtil.XlsWriter - Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4
-2026-01-03 17:51:39.042 [main] ERROR util.downloadUtil.XlsWriter - Файл не найден src\main\resources\universityInfo.xlsx (Процесс не может получить доступ к файлу, так как этот файл занят другим процессом)
-2026-01-03 17:51:39.042 [main] INFO  App - Работа приложения завершена!
-2026-01-03 17:52:04.417 [main] INFO  App - Приложение запущено!
-2026-01-03 17:52:04.428 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
-2026-01-03 17:52:05.347 [main] INFO  util.downloadUtil.ExcelDataLoader - Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx
-2026-01-03 17:52:05.431 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Students.json
-2026-01-03 17:52:05.455 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:52:05.455 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга в: src/main/resources/Universities.json
-2026-01-03 17:52:05.458 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:52:05.459 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Students.json
-2026-01-03 17:52:05.460 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:52:05.475 [main] INFO  util.JSONutil.JsonUtil - Начало парсинга из: src/main/resources/Universities.json
-2026-01-03 17:52:05.477 [main] INFO  util.JSONutil.JsonUtil - Успешное завершение
-2026-01-03 17:52:05.489 [main] INFO  util.downloadUtil.XlsWriter - Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4
-2026-01-03 17:52:07.188 [main] INFO  util.downloadUtil.XlsWriter - Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4
-2026-01-03 17:52:07.189 [main] INFO  App - Работа приложения завершена!
 <log4j:event logger="App"
-             timestamp="1767427517545" level="INFO" thread="main">
+             timestamp="1768570798218" level="INFO" thread="main">
   <log4j:message>Приложение запущено!</log4j:message>
   <log4j:locationInfo class="App"
-                      method="main" file="App.java" line="25"/>
+                      method="main" file="App.java" line="29"/>
 
 </log4j:event>
 
 <log4j:event logger="util.downloadUtil.ExcelDataLoader"
-             timestamp="1767427517559" level="INFO" thread="main">
+             timestamp="1768570798274" level="INFO" thread="main">
   <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
   <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
-                      method="readData" file="ExcelDataLoader.java" line="47"/>
+                      method="readData" file="ExcelDataLoader.java" line="41"/>
 
 </log4j:event>
 
 <log4j:event logger="util.downloadUtil.ExcelDataLoader"
-             timestamp="1767427518592" level="INFO" thread="main">
+             timestamp="1768570801213" level="INFO" thread="main">
   <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
   <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
-                      method="readData" file="ExcelDataLoader.java" line="47"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518668" level="INFO" thread="main">
-  <log4j:message>Начало парсинга в: src/main/resources/Students.json</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseToJson" file="JsonUtil.java" line="39"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518687" level="INFO" thread="main">
-  <log4j:message>Успешное завершение</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseToJson" file="JsonUtil.java" line="44"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518687" level="INFO" thread="main">
-  <log4j:message>Начало парсинга в: src/main/resources/Universities.json</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseToJson" file="JsonUtil.java" line="39"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518690" level="INFO" thread="main">
-  <log4j:message>Успешное завершение</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseToJson" file="JsonUtil.java" line="44"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518691" level="INFO" thread="main">
-  <log4j:message>Начало парсинга из: src/main/resources/Students.json</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseFromJson" file="JsonUtil.java" line="25"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518692" level="INFO" thread="main">
-  <log4j:message>Успешное завершение</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseFromJson" file="JsonUtil.java" line="30"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518705" level="INFO" thread="main">
-  <log4j:message>Начало парсинга из: src/main/resources/Universities.json</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseFromJson" file="JsonUtil.java" line="25"/>
-
-</log4j:event>
-
-<log4j:event logger="util.JSONutil.JsonUtil"
-             timestamp="1767427518705" level="INFO" thread="main">
-  <log4j:message>Успешное завершение</log4j:message>
-  <log4j:locationInfo class="util.JSONutil.JsonUtil"
-                      method="parseFromJson" file="JsonUtil.java" line="30"/>
+                      method="readData" file="ExcelDataLoader.java" line="41"/>
 
 </log4j:event>
 
 <log4j:event logger="util.downloadUtil.XlsWriter"
-             timestamp="1767427518716" level="INFO" thread="main">
+             timestamp="1768570801310" level="INFO" thread="main">
   <log4j:message>Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4</log4j:message>
   <log4j:locationInfo class="util.downloadUtil.XlsWriter"
-                      method="write" file="XlsWriter.java" line="41"/>
+                      method="write" file="XlsWriter.java" line="43"/>
 
 </log4j:event>
 
 <log4j:event logger="util.downloadUtil.XlsWriter"
-             timestamp="1767427518997" level="INFO" thread="main">
+             timestamp="1768570802077" level="INFO" thread="main">
   <log4j:message>Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4</log4j:message>
   <log4j:locationInfo class="util.downloadUtil.XlsWriter"
-                      method="writeFile" file="XlsWriter.java" line="99"/>
+                      method="writeFile" file="XlsWriter.java" line="101"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XmlWriter"
+             timestamp="1768570802112" level="ERROR" thread="main">
+  <log4j:message>Ошибка создания JAXBContext</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XmlWriter"
+                      method="&lt;clinit&gt;" file="XmlWriter.java" line="29"/>
 
 </log4j:event>
 
 <log4j:event logger="App"
-             timestamp="1767427518998" level="INFO" thread="main">
+             timestamp="1768571661676" level="INFO" thread="main">
+  <log4j:message>Приложение запущено!</log4j:message>
+  <log4j:locationInfo class="App"
+                      method="main" file="App.java" line="29"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.ExcelDataLoader"
+             timestamp="1768571661688" level="INFO" thread="main">
+  <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
+                      method="readData" file="ExcelDataLoader.java" line="41"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.ExcelDataLoader"
+             timestamp="1768571662599" level="INFO" thread="main">
+  <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
+                      method="readData" file="ExcelDataLoader.java" line="41"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XlsWriter"
+             timestamp="1768571662664" level="INFO" thread="main">
+  <log4j:message>Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XlsWriter"
+                      method="write" file="XlsWriter.java" line="43"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XlsWriter"
+             timestamp="1768571662922" level="INFO" thread="main">
+  <log4j:message>Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XlsWriter"
+                      method="writeFile" file="XlsWriter.java" line="101"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XmlWriter"
+             timestamp="1768571663225" level="INFO" thread="main">
+  <log4j:message>Start marshalling</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XmlWriter"
+                      method="writeToXml" file="XmlWriter.java" line="38"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XmlWriter"
+             timestamp="1768571663249" level="INFO" thread="main">
+  <log4j:message>Directory created successfully</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XmlWriter"
+                      method="createXmlDir" file="XmlWriter.java" line="70"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XmlWriter"
+             timestamp="1768571663279" level="INFO" thread="main">
+  <log4j:message>Marshalling finished</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XmlWriter"
+                      method="writeToXml" file="XmlWriter.java" line="63"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.JsonWriter"
+             timestamp="1768571663279" level="INFO" thread="main">
+  <log4j:message>Начало преобразования в Json</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.JsonWriter"
+                      method="write" file="JsonWriter.java" line="28"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.JsonWriter"
+             timestamp="1768571663281" level="INFO" thread="main">
+  <log4j:message>Директория успешно создана</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.JsonWriter"
+                      method="createJsonDir" file="JsonWriter.java" line="55"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571663392" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src\main\resources\2026.01.16_23-54_json_result.xml</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571663407" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571663407" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src\main\resources\2026.01.16_23-54_json_result.xml</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571663411" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571663411" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src\main\resources\2026.01.16_23-54_json_result.xml</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571663414" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.JsonWriter"
+             timestamp="1768571663414" level="INFO" thread="main">
+  <log4j:message>Преобразование в Json завершено</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.JsonWriter"
+                      method="write" file="JsonWriter.java" line="49"/>
+
+</log4j:event>
+
+<log4j:event logger="App"
+             timestamp="1768571663415" level="INFO" thread="main">
   <log4j:message>Работа приложения завершена!</log4j:message>
   <log4j:locationInfo class="App"
-                      method="main" file="App.java" line="52"/>
+                      method="main" file="App.java" line="45"/>
+
+</log4j:event>
+
+<log4j:event logger="App"
+             timestamp="1768571843849" level="INFO" thread="main">
+  <log4j:message>Приложение запущено!</log4j:message>
+  <log4j:locationInfo class="App"
+                      method="main" file="App.java" line="29"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.ExcelDataLoader"
+             timestamp="1768571843864" level="INFO" thread="main">
+  <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
+                      method="readData" file="ExcelDataLoader.java" line="41"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.ExcelDataLoader"
+             timestamp="1768571845051" level="INFO" thread="main">
+  <log4j:message>Начало чтения файла; Путь: src/main/resources/universityInfo.xlsx</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.ExcelDataLoader"
+                      method="readData" file="ExcelDataLoader.java" line="41"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XlsWriter"
+             timestamp="1768571845132" level="INFO" thread="main">
+  <log4j:message>Старт сбора статистики в файл: src/main/resources/universityInfo.xlsx, размер 4</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XlsWriter"
+                      method="write" file="XlsWriter.java" line="43"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XlsWriter"
+             timestamp="1768571845414" level="INFO" thread="main">
+  <log4j:message>Запись в файл src/main/resources/universityInfo.xlsx прошла успешно. Записей: 4</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XlsWriter"
+                      method="writeFile" file="XlsWriter.java" line="101"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XmlWriter"
+             timestamp="1768571845594" level="INFO" thread="main">
+  <log4j:message>Start marshalling</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XmlWriter"
+                      method="writeToXml" file="XmlWriter.java" line="38"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XmlWriter"
+             timestamp="1768571845609" level="INFO" thread="main">
+  <log4j:message>Directory created successfully</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XmlWriter"
+                      method="createXmlDir" file="XmlWriter.java" line="70"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.XmlWriter"
+             timestamp="1768571845635" level="INFO" thread="main">
+  <log4j:message>Marshalling finished</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.XmlWriter"
+                      method="writeToXml" file="XmlWriter.java" line="63"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.JsonWriter"
+             timestamp="1768571845638" level="INFO" thread="main">
+  <log4j:message>Начало преобразования в Json</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.JsonWriter"
+                      method="write" file="JsonWriter.java" line="28"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.JsonWriter"
+             timestamp="1768571845641" level="INFO" thread="main">
+  <log4j:message>Директория успешно создана</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.JsonWriter"
+                      method="createJsonDir" file="JsonWriter.java" line="55"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571845684" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src\main\resources\2026.01.16_23-57_json_result.json</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571845702" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571845703" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src\main\resources\2026.01.16_23-57_json_result.json</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571845707" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571845708" level="INFO" thread="main">
+  <log4j:message>Начало парсинга в: src\main\resources\2026.01.16_23-57_json_result.json</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="39"/>
+
+</log4j:event>
+
+<log4j:event logger="util.JSONutil.JsonUtil"
+             timestamp="1768571845710" level="INFO" thread="main">
+  <log4j:message>Успешное завершение</log4j:message>
+  <log4j:locationInfo class="util.JSONutil.JsonUtil"
+                      method="parseToJson" file="JsonUtil.java" line="44"/>
+
+</log4j:event>
+
+<log4j:event logger="util.downloadUtil.JsonWriter"
+             timestamp="1768571845710" level="INFO" thread="main">
+  <log4j:message>Преобразование в Json завершено</log4j:message>
+  <log4j:locationInfo class="util.downloadUtil.JsonWriter"
+                      method="write" file="JsonWriter.java" line="49"/>
+
+</log4j:event>
+
+<log4j:event logger="App"
+             timestamp="1768571845710" level="INFO" thread="main">
+  <log4j:message>Работа приложения завершена!</log4j:message>
+  <log4j:locationInfo class="App"
+                      method="main" file="App.java" line="45"/>
 
 </log4j:event>
 

@@ -1,0 +1,30 @@
+[
+  {
+    "studyProfile": "PHYSICS",
+    "avgExamScore": 4.25,
+    "studentsNumber": 8,
+    "universitiesNumber": 2,
+    "universityNames": "МВУ - Московский Выдуманный Университет; МПИ - Московский Придуманный Институт; "
+  },
+  {
+    "studyProfile": "MEDICINE",
+    "avgExamScore": 3.67,
+    "studentsNumber": 3,
+    "universitiesNumber": 3,
+    "universityNames": "МГМУ - Московский Государственный Медицинский Университет; ТУМ - Тамбовский Университет Медицины; СМИ - Самарский Медицинский Институт; "
+  },
+  {
+    "studyProfile": "MATHEMATICS",
+    "avgExamScore": 0.0,
+    "studentsNumber": 0,
+    "universitiesNumber": 1,
+    "universityNames": "КУВ - Казанский Университет Вычислений; "
+  },
+  {
+    "studyProfile": "LINGUISTICS",
+    "avgExamScore": 0.0,
+    "studentsNumber": 0,
+    "universitiesNumber": 1,
+    "universityNames": "ВЛПУ - Воронежский Литературно-Переводческий Университет; "
+  }
+]
